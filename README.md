@@ -8,7 +8,8 @@ This package contains:
 
 ## Installation
 ### Download the latest release
-Click on the latest release and download the `vdl120.zip` file. Unpack it to desired installation folder.
+Click on the latest release and download the `vdl120.zip` file.
+Unpack the zip into desired installation folder.
 ### Install the self-signed certificate
 - open a Command Prompt with Administrator privileges.
 - change to installation folder.
