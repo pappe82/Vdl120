@@ -136,15 +136,15 @@ namespace Vdl120Cli
                 var measurements = reader.ReadMeasurements(new Progress<int>(ShowProgress));
                 //reader.Config is only available after reading the measurements
 
-                writer.WriteLine("Measurement\t"+reader.Config.Name);
-                writer.WriteLine("Start time\t" + reader.Config.Time.ToString("s"));
-                writer.WriteLine("Total Count\t" + measurements.Count);
+                writer.WriteLine("Measurement|"+reader.Config.Name);
+                writer.WriteLine("Start time|" + reader.Config.Time.ToString("s"));
+                writer.WriteLine("Total Count|" + measurements.Count);
                 writer.WriteLine();
-                writer.WriteLine($"Timestamp\tTemp [{reader.Config.TemperatureUnit.ToText()}]\trH [%]");
+                writer.WriteLine($"Timestamp|Temp [{reader.Config.TemperatureUnit.ToText()}]|rH [%]");
 
                 foreach (var m in measurements)
                 {
-                    writer.WriteLine($"{m.TimeStamp:s}\t{m.Temperature:F1}\t{m.Humidity:F1}");
+                    writer.WriteLine($"{m.TimeStamp:s}|{m.Temperature:F1}|{m.Humidity:F1}");
                 }
 
                 return 0;

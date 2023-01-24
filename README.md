@@ -13,6 +13,7 @@ Click on the latest release and download the `vdl120.zip` file. Unpack it to des
 - open a Command Prompt with Administrator privileges.
 - change to installation folder.
 - run `certutil -addstore root .\Driver\farcast.cer` or manually import it to Trusted Root Certification Authorities
+### Install the WinUSB driver package
 - plug in the logger	
 - run `pnputil -i -a .\Driver\vdl120.inf` or manually install the Driver using Device Manager
 ### Using the command line interface
