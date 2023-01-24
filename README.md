@@ -10,11 +10,11 @@ This package contains:
 ### Download the latest release
 Click on the latest release and download the `vdl120.zip` file. Unpack it to desired installation folder.
 ### Install the self-signed certificate
-- open a Command Prompt wit Administrator priviledges.
+- open a Command Prompt with Administrator privileges.
 - change to installation folder.
 - run `certutil -addstore root .\Driver\farcast.cer` or manually import it to Trusted Root Certification Authorities
 - plug in the logger	
-- run `pnputil -i -a driver\vdl120.inf` or manually install the Driver using Device Manager
+- run `pnputil -i -a .\Driver\vdl120.inf` or manually install the Driver using Device Manager
 ### Using the command line interface
 - open a Command Prompt
 - change to installation folder.
