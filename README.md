@@ -7,7 +7,8 @@ This package contains:
 - self-signed driver package for Windows 10
 
 ## Installation
-### Download the latest release zip file. Unpack it to desired installation folder.
+### Download the latest release
+Click on the latest release and download the `vdl120.zip` file. Unpack it to desired installation folder.
 ### Install the self-signed certificate
 - open a Command Prompt wit Administrator priviledges.
 - change to installation folder.
