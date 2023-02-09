@@ -8,12 +8,16 @@ namespace Vdl120io
         private readonly VdlDevice _device;
         private readonly int _readTimeout;
         private readonly int _writeTimeout;
+        private readonly int _tempBias;
+        private readonly int _humBias;
 
-        public VdlMeasurementReader(VdlDevice parent, int readTimeout, int writeTimeout)
+        public VdlMeasurementReader(VdlDevice parent, int readTimeout, int writeTimeout, int tempBias, int humBias)
         {
             _device = parent;
             _readTimeout = readTimeout;
             _writeTimeout = writeTimeout;
+            _tempBias = tempBias;
+            _humBias = humBias;
         }
 
         private readonly List<VdlMeasurement> _measurements = new();
@@ -69,9 +73,9 @@ namespace Vdl120io
                 _measurements.Add(
                     new VdlMeasurement(
                         CalcMeasurementTime(),
-                        ConvertToValue(tempRaw),
+                        ConvertToValue(tempRaw) + _tempBias,
                         Config.TemperatureUnit,
-                        ConvertToValue(humRaw)));
+                        ConvertToValue(humRaw) + _humBias));
             }
         }
 

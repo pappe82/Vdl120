@@ -26,3 +26,8 @@ Unpack the zip into desired installation folder.
 - plug in the logger
 - run `vdl120cli.exe` without options to show the call syntax
 
+# Adjusting for sensor drift
+If the temperature or humidity measurements returned from the device divert from a calibrated comparing device,
+you can edit the Vdl120Cli.exe.config XML file and adjust the bias for Temperature and Humidity.
+Positive and negative integer values are allowed.
+

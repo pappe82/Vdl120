@@ -15,7 +15,9 @@ namespace Vdl120Cli
     {
         private static readonly VdlDeviceFactory Factory = new(
             readTimeout:TimeSpan.FromSeconds(5),
-            writeTimeout:TimeSpan.FromSeconds(2));
+            writeTimeout:TimeSpan.FromSeconds(2),
+            Properties.Settings.Default.TempBias,
+            Properties.Settings.Default.HumBias);
 
         static int Main(string[] args)
         {
